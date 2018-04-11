@@ -1,0 +1,205 @@
+﻿<%- include('header.ejs') %>
+    <!-- 导航 -->
+    <nav class="blog-nav layui-header">
+            <div class="blog-container">
+                <!-- QQ互联登陆 -->
+                <a href="javascript:;" class="blog-user">
+                    <i class="fa fa-qq"></i>
+                </a>
+                <a href="javascript:;" class="blog-user layui-hide">
+                    <img src="/images/Absolutely.jpg" alt="Absolutely" title="Absolutely" />
+                </a>
+                <!-- 首页 -->
+                <a class="blog-logo" href="home">小鱼喝水</a>
+                <!-- 导航菜单 -->
+                <ul class="layui-nav" lay-filter="nav">
+                    <li class="layui-nav-item">
+                        <a href="home"><i class="fa fa-home fa-fw"></i>&nbsp;网站首页</a>
+                    </li>
+                    <li class="layui-nav-item layui-this">
+                        <a href="article"><i class="fa fa-file-text fa-fw"></i>&nbsp;文章专栏</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="resource"><i class="fa fa-tags fa-fw"></i>&nbsp;资源分享</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="timeline"><i class="fa fa-hourglass-half fa-fw"></i>&nbsp;点点滴滴</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="about"><i class="fa fa-info fa-fw"></i>&nbsp;关于本站</a>
+                    </li>
+                </ul>
+                <!-- 手机和平板的导航开关 -->
+                <a class="blog-navicon" href="javascript:;">
+                    <i class="fa fa-navicon"></i>
+                </a>
+            </div>
+        </nav>
+    <!-- 主体（一般只改变这里的内容） -->
+    <div class="blog-body">
+        <div class="blog-container">
+            <blockquote class="layui-elem-quote sitemap layui-breadcrumb shadow">
+                <a href="home" title="网站首页">网站首页</a>
+                <a href="article" title="文章专栏">文章专栏</a>
+                <a><cite>我理解的“大前端”或“大无线”</cite></a>
+            </blockquote>
+            <div class="blog-main">
+                <div class="blog-main-left">
+                    <!-- 文章内容（使用Kingeditor富文本编辑器发表的） -->
+                    <div class="article-detail shadow">
+                        <div class="article-detail-title">
+                                我理解的“大前端”或“大无线”
+                        </div>
+                        <div class="article-detail-info">
+                            <span>编辑时间：2017/3/18 17:30:22</span>
+                            <span>作者：Absolutely</span>
+                            <span>浏览量：12</span>
+                        </div>
+                        <div class="article-detail-content">
+                            <p>前   言</p>
+                            <p>最近，我所在的团队做了一些结构调整，其实我一直想讲讲这次调整，希望能够带给同行一些思考，但因调整后很多事情还未走上正轨，一直拖延着，现在终于有时间把一些想法写下来记录成文字。</p>
+                            <p>今天早晨，还看到一篇文章，讲“大前端”，文中展望了近年来“前端”影响的领域，从美工时代刀耕火种的时代到现在延伸到 NodeJS ，ReactNative甚至桌面端，以及传统前端的时代，听来的确让人非常兴奋和自豪，但是作为一名理性的工程师，对于这种自High的论调一定要抱有谨慎的态度。</p>
+                            <p>其实在技术选型上我是一个激进却又保守的人，所以，我同大家一样，对于JS语言冒出来的给人无限想象的能力非常的敏锐和兴奋，但是在落地到真正的业务中的时候却要仔细权衡好它的真正的“价值”。此处的价值更多针对的是“对公司整体业务的价值”，而不是对团队或者个人的价值或是其他，所以，引入一个技术栈，绝非看起来那样简单，“新技术”可能会给你的团队或者业务带来加持，但是更多时候，外界的人云亦云却往往会夸大某个技术的价值，然后同时刻意避免谈及这些技术带来的问题，就是我们通常所说的“脱离场景讨论技术”，而且通常带来的问题比解决的问题还要多得多，这时候如果抱着“扩大前端团队的话语权”或者“做一步看一步毕竟业界都在这样玩”的态度，那就和“技术创造价值”的本意相违背了。</p>
+                            <p>其实，大家会发现我所在的团队并不是一个保守的团队，从外面看，我们始终走在最前沿，但是从内部看，其实我们一直在关注“技术创造价值”这件事情的本质，所以我们给前端团队强化了很多职能，但是却走了一些不同的道路，之所以会这样，其实就是基于我们针对每个技术栈所做的思考，接下来我会举几个例子来讲。</p>
+                            <p>其实我今天本来想讲的事情，并不只是“前端”，而是这次团队组织架构调整后的“大无线”，为什么要从“大前端”到“大无线”，也是基于最大化价值输出的考虑，这是后话。</p>
+                            <p>这次调整，最大的三个动作就是， NodeJS 的职能变化/ReactNative的引入/专门的架构组职能，然后包含其他一些小动作。</p>
+                            <p>NodeJS 职能变化</p>
+                            <p>对于 NodeJS ，我其实有挺多的话题想分享，关于前后端分离，关于服务端渲染，关于纯服务端开发。很长一段时间内，在我们团队， NodeJS 都是在做纯服务端开发，然后我们的核心关注点一直是致力于将 NodeJS 在服务端开发的整个工程能力提升到和Java生态相当甚至是超越，包括开发/部署/运维/服务化/线上保障 等。值得注意的一点是，当我们的 NodeJS 运用非常成熟的时候，我们却一直没有做业界大家在玩的服务端渲染，或者前后端分离中间层，其实不是我们不了解或者没有能力，而是我们一直在思考“为什么”，然后会”带来什么问题？“。我觉得很多公司在做服务端渲染或者前后端分离的时候，可能都没有非常全面的去思考过这个问题，是必须要做了而且带来的价值远远超越了风险？还是只是为了让团队占领更大的势力版图？我们前几天在讨论这个问题的时候还提到，包括在某些大公司内，做某些事情可能只是政治正确或者为了业绩好看，如果你去问一个服务端开发，他对这些事情的看法是什么？难有好评？那这件事情可能就已经走偏了，它可能关注了前端团队的自身价值，却偏离了整个技术团队的价值体现。</p>
+                            <p>当然我不是表达不应该去做某些事情，而只是讲所有技术栈的落地都要基于场景去考量权衡。其实我们团队后来也做了业界意义上基于”服务端渲染"的”前后端分离“项目，在某个特殊业务中，我们衡量必须要做，与多方共同讨论，最终实施落地的一个和谐方案。做这个项目的目的足够单纯，但是我们并没有打算推广这个方案，因为在我看来，他只是解决某个特定场景的一个解决方案，而不是一种必须推开来的“开发方式”。而且对于服务端渲染引入的风险一定要做好风险评估，包含但不限于：运维/线上保障能力（前端的弱项）；前后端开发的复杂度；性能问题（真正做过服务端的同学对内存和cpu占用都会很敏感，但是目前一些方案看来在这方面的损耗还是太夸张）； NodeJS 本身的开发能力熟悉程度。其实有些问题是很严重的问题，只是在业界大家讨论的时候，大家会刻意去弱化某些话题，而是强调其革新之处，或者是未来的趋势，而这些理由，在真实场景落地的时候的作用微乎其微，别人一个质疑就足以让你的方案变成一个”糟糕的方案“。</p>
+                            <p>不过，我所在的团队的 NodeJS ，最近其实在做”去服务端逻辑“化，也就是慢慢退出纯服务端开发的领域，倒不是被倒逼，我觉得一个团队应该做什么事情从来不是因为技术之间的斗争导致的，而是前面提到的整体价值，在公司飞速发展的业务背景下， NodeJS 的开发生态和团队扩张速度，都是瓶颈。 NodeJS 开发者的开发能力其实都很强，但是却缺乏传统软件工程大规模开发的经验，这些经验可能大部分都不是和技术相关的，所以越在技术上走的深入，与大规模工程化关注的方向越发背离。所以，我基本上是主动要求团队退出服务端开发，将整个公司的服务端统一到 Java 技术栈上，统一由 Java 架构组规划技术发展，由 Java 业务组统一发展业务的工程化，这样对公司的爆炸式增长会更有益处，随后Java开发在一个月内扩招20人，而 NodeJS 一年时间里基本一直维持在5个人的水平（人数也是影响工程化的重要一环），想想这五位同学曾经在一年之内建设的诸多系统，虽然真的很牛逼，但是却略显小气，没有一个统一的规划和价值体现。</p>
+                            <p>那我们现在在做什么？</p>
+                            <p>之前提到，我们现在整个团队成为“大无线”，其中包含两个大团队，架构和业务，而 NodeJS 正是架构中的一员，对于 NodeJS 来说，它擅长的正是对社区和标准的追逐/开发效率/异步性能，而我们则发挥这些长处，在整个“大无线”的范围内解决相关的问题。例如正在做的一件事情，一个无线网关系统，具体网关系统是做什么事情的可能无法一句话描述清楚，核心两点，1. 公司内所有api请求的入口和规则分发，2. 在网关层做服务分级。具体实现其实并不是完全的 NodeJS 技术栈，其中多个子系统，包括Nginx开发网络层/lua开发的独立的心跳检查/ NodeJS 开发的规则管理等，对于 NodeJS 来说是个不小的挑战，对于整个无线端，甚至服务端，都有深远的意义，这种事情才是真正“有意义”的，后续我们也还有其他规划，不过一切都需要一步一步调整，而对于我们 NodeJS 开发来说的调整，就是转变思路，发挥长处，而不是一心想要去改变服务端开发的格局。</p>
+                            <p>ReactNative的大规模应用</p>
+                            <p>我所在团队对于RN的技术积累其实从很早就开始了，大概接近一年前，但是一直处于调研的状态，甚至组件库都写好了，基础的集成SDK也写好了，但是从来没被应用到业务中。为什么？不是因为不成熟，也不是因为hold不住，而是没想明白，为什么一定要用RN？而不是H5或者Native？这其实是个很严肃的问题，你想不清楚一个技术的价值的时候，不要说是说服别人，连说服自己都很难，这样的事情注定无法落地，所以我们就一直在调研，在准备。就跟微信小程序一样，我们调研了很久，自己做了个小程序上线，但是后来还是没有做一个真正的业务相关的小程序，因为实在想不明白要做什么，为什么必须要用小程序？</p>
+                            <p>后来，算是跟上了“大无线”整合的契机，也是公司业务飞速发展的契机。当我们统一规划一下公司内所有的前端和无线端之后，发现数量竟然和所有服务端（包含架构和数据等）的数量基本相当，这很不正常，当公司开始快速扩张之后，这种比例是非常吓人的，而核心问题就是我们公司无线端所有的开发工作量基本都是Native承担的，这主要受制于公司业务类型限制，公司基本所有业务都是偏商家服务类型，重交互重操作重数据，在客户端上开发，对H5来说的确难以满足需求，不管是性能还是体验还是开发成熟度上来说。所以除了公司的to C业务和PC端业务之外，大量投入客户端开发，而因为之前客户端分散在各个业务之间，每个业务的每个端都各自为政，在底层方案和组件SDK等问题上都缺乏一个统一的规划。</p>
+                            <p>注意！这里提到两个核心问题</p>
+                            <p>开发人员输出价值的人均效率，对于Native来说都需要至少乘以2，如果算上两端之间的协调，将远远大于2这个最好预期。</p>
+                            <p>难以统一规划整个客户端的统一发展，总是会受限于两个完全不同的端各自不同的技术栈。</p>
+                            <p>这时候，ReactNative站出来了，一个真正性能折中但是可以完美解决这两个核心问题的技术方向，而且我们还是有技术积累的，至于我们如何在RN和Weex之间做选型，其实不想多说，Weex的场景并不适合我们的业务类型，而且作为创业公司，我们只会选择整个业界非常成熟的方案而不是一个还在发展期只是看起来很美好的方案。 对于ReactNative，核心价值点，其实就是上面说的这两点，听起来只是两个问题总结，但是对于整个技术团队，甚至对于整个公司的业务发展，这都是非常核心的点，所以，我们毫不犹豫的执行，短时间内快速推进了整个RN的解决方案以及落地。</p>
+                            <p>针对RN，我们做了几个事情</p>
+                            <p>完全改变RN的开发流程，自己定制的脚手架以及开发流程/调试流程/发布流程/版本更新规则。（我司最擅长的点）</p>
+                            <p>自己实现的集成流程/热更新方案，这里有一个核心点，我们制定了某个App依赖某个版本bundle的机制，RN代码不是每次热更新，然后RN代码是直接内置到工程里走发版，而不是线上访问，因为我们的业务场景很特殊，业务耦合很强，所以制定了严格的版本依赖规则和维护方式，热更新的能力只限于bugfix，不能用于发布新功能。</p>
+                            <p>封装过客户端SDK，主要提供几个能力：Bundle依赖管理/Native组件以及提供更多组件SDK无缝接入的能力/RN和Native和H5之间通过协议互相调用的能力/性能和错误崩溃监测/其他底层优化（例如秒开，bundle分拆复用等）。</p>
+                            <p>最终面向具体业务开发的一部分：开发框架/开发规范/基于设计规范的组件库/Native组件封装/工具库/文档/模板项目/example项目列表 等，通过这些，我们给具体的业务开发暴露极少的概念，可以在短时间内完成一个RN项目，并且将可能平台差异的部分都做了深度封装。</p>
+                            <p>所以，可以看到，其实我们的RN开发有自己的一些特色</p>
+                        </div>
+                    </div>
+                    <!-- 评论区域 -->
+                    <div class="blog-module shadow" style="box-shadow: 0 1px 8px #a6a6a6;">
+                        <fieldset class="layui-elem-field layui-field-title" style="margin-bottom:0">
+                            <legend>来说两句吧</legend>
+                            <div class="layui-field-box">
+                                <form class="layui-form blog-editor" action="">
+                                    <div class="layui-form-item">
+                                        <textarea name="editorContent" lay-verify="content" id="remarkEditor" placeholder="请输入内容" class="layui-textarea layui-hide"></textarea>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <button class="layui-btn" lay-submit="formRemark" lay-filter="formRemark">提交评论</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </fieldset>
+                        <div class="blog-module-title">最新评论</div>
+                        <ul class="blog-comment">
+                            <li>
+                                <div class="comment-parent">
+                                    <img src="../images/Absolutely.jpg" alt="absolutely" />
+                                    <div class="info">
+                                        <span class="username">Absolutely</span>
+                                        <span class="time">2017-03-18 18:46:06</span>
+                                    </div>
+                                    <div class="content">
+                                        我为大家做了模拟评论功能！还有，这个评论功能也可以改成和留言一样，但是目前没改，有兴趣可以自己改
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="blog-main-right">
+                    <!--右边悬浮 平板或手机设备显示-->
+                    <div class="category-toggle"><i class="fa fa-chevron-left"></i></div><!--这个div位置不能改，否则需要添加一个div来代替它或者修改样式表-->
+                    <div class="article-category shadow">
+                        <div class="article-category-title">分类导航</div>
+                        <!-- 点击分类后的页面和artile.html页面一样，只是数据是某一类别的 -->
+                        <a href="javascript:layer.msg(&#39;切换到相应分类&#39;)">ASP.NET MVC</a>
+                        <a href="javascript:layer.msg(&#39;切换到相应分类&#39;)">SQL Server</a>
+                        <a href="javascript:layer.msg(&#39;切换到相应分类&#39;)">Entity Framework</a>
+                        <a href="javascript:layer.msg(&#39;切换到相应分类&#39;)">Web前端</a>
+                        <a href="javascript:layer.msg(&#39;切换到相应分类&#39;)">C#基础</a>
+                        <a href="javascript:layer.msg(&#39;切换到相应分类&#39;)">杂文随笔</a>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="blog-module shadow">
+                        <div class="blog-module-title">相似文章</div>
+                        <ul class="fa-ul blog-module-ul">
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.html">基于laypage的layui扩展模块（pagesize.js）！</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.html">基于laypage的layui扩展模块（pagesize.js）！</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.html">基于laypage的layui扩展模块（pagesize.js）！</a></li>
+                        </ul>
+                    </div>
+                    <div class="blog-module shadow">
+                        <div class="blog-module-title">随便看看</div>
+                        <ul class="fa-ul blog-module-ul">
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.html">一步步制作时光轴（一）（HTML篇）</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.html">ASP.NET MVC制作404跳转（非302和200）</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.html">ASP.NET MVC 防范跨站请求伪造（CSRF）</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.html">一步步制作时光轴（三）（JS篇）</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.html">基于laypage的layui扩展模块（pagesize.js）！</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.html">一步步制作时光轴（二）（CSS篇）</a></li>
+                            <li><i class="fa-li fa fa-hand-o-right"></i><a href="detail.html">写了个Win10风格快捷菜单！</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <footer class="blog-footer">
+        <p><span>Copyright</span><span>&copy;</span><span>2017</span><a href="http://www.lyblogs.cn">不落阁</a><span>Design By LY</span></p>
+        <p><a href="http://www.miibeian.gov.cn/" target="_blank">蜀ICP备16029915号-1</a></p>
+    </footer>
+    <!--侧边导航-->
+    <ul class="layui-nav layui-nav-tree layui-nav-side blog-nav-left layui-hide" lay-filter="nav">
+        <li class="layui-nav-item">
+            <a href="home."><i class="fa fa-home fa-fw"></i>&nbsp;网站首页</a>
+        </li>
+        <li class="layui-nav-item layui-this">
+            <a href="article"><i class="fa fa-file-text fa-fw"></i>&nbsp;文章专栏</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="resource"><i class="fa fa-tags fa-fw"></i>&nbsp;资源分享</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="timeline"><i class="fa fa-road fa-fw"></i>&nbsp;点点滴滴</a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="about"><i class="fa fa-info fa-fw"></i>&nbsp;关于本站</a>
+        </li>
+    </ul>
+    <!--分享窗体-->
+    <div class="blog-share layui-hide">
+        <div class="blog-share-body">
+            <div style="width: 200px;height:100%;">
+                <div class="bdsharebuttonbox">
+                    <a class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                    <a class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                    <a class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                    <a class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--遮罩-->
+    <div class="blog-mask animated layui-hide"></div>
+    <!-- layui.js -->
+    <script src="/plug/layui/layui.js"></script>
+    <!-- 自定义全局脚本 -->
+    <script src="/js/global.js"></script>
+    <!-- 比较好用的代码着色插件 -->
+    <script src="/js/prettify.js"></script>
+    <!-- 本页脚本 -->
+    <script src="/js/detail.js"></script>
+</body>
+</html>
