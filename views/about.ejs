@@ -1,30 +1,19 @@
-﻿<%- include('header.ejs') %>
+﻿<%- include('components/header.ejs') %>
+<link href="../css/about.css" rel="stylesheet" />
+</head>
+<body>
     <!-- 导航 -->
     <nav class="blog-nav layui-header">
             <div class="blog-container">
-                <!-- QQ互联登陆 -->
-                <a href="javascript:;" class="blog-user">
-                    <i class="fa fa-qq"></i>
-                </a>
-                <a href="javascript:;" class="blog-user layui-hide">
-                    <img src="/images/Absolutely.jpg" alt="Absolutely" title="Absolutely" />
-                </a>
                 <!-- 不落阁 -->
-                <a class="blog-logo" href="home">不落阁</a>
+                <a class="blog-logo" href="home">小鱼喝水</a>
                 <!-- 导航菜单 -->
                 <ul class="layui-nav" lay-filter="nav">
                     <li class="layui-nav-item">
-                            
                         <a href="home"><i class="fa fa-home fa-fw"></i>&nbsp;网站首页</a>
                     </li>
                     <li class="layui-nav-item">
                         <a href="article"><i class="fa fa-file-text fa-fw"></i>&nbsp;文章专栏</a>
-                    </li>
-                    <li class="layui-nav-item">
-                        <a href="resource"><i class="fa fa-tags fa-fw"></i>&nbsp;资源分享</a>
-                    </li>
-                    <li class="layui-nav-item">
-                        <a href="timeline"><i class="fa fa-hourglass-half fa-fw"></i>&nbsp;点点滴滴</a>
                     </li>
                     <li class="layui-nav-item  layui-this">
                         <a href="about"><i class="fa fa-info fa-fw"></i>&nbsp;关于本站</a>
@@ -48,8 +37,6 @@
                     <ul class="layui-tab-title">
                         <li lay-id="1">关于博客</li>
                         <li lay-id="2">关于作者</li>
-                        <li lay-id="3" id="frinedlink">友情链接</li>
-                        <li lay-id="4">留言墙</li>
                     </ul>
                     <div class="layui-tab-content">
                         <div class="layui-tab-item">
@@ -57,17 +44,9 @@
                                 <div class="aboutinfo-figure">
                                     <img src="../images/Logo_100.png" alt="不落阁" />
                                 </div>
-                                <p class="aboutinfo-nickname">不落阁</p>
-                                <p class="aboutinfo-introduce">一个.NET程序员的个人博客，记录博主学习和成长之路，分享.NET方面技术和源码</p>
+                                <p class="aboutinfo-nickname">seven007</p>
+                                <p class="aboutinfo-introduce">一枚90后程序员，前端开发工程师</p>
                                 <p class="aboutinfo-location"><i class="fa fa-link"></i>&nbsp;&nbsp;<a target="_blank" href="http://www.lyblogs.cn">www.lyblogs.cn</a></p>
-                                <hr />
-                                <div class="aboutinfo-contact">
-                                    <a target="_blank" title="网站首页" href="home.html"><i class="fa fa-home fa-2x" style="font-size:2.5em;position:relative;top:3px"></i></a>
-                                    <a target="_blank" title="文章专栏" href="article.html"><i class="fa fa-file-text fa-2x"></i></a>
-                                    <a target="_blank" title="资源分享" href="resource.html"><i class="fa fa-tags fa-2x"></i></a>
-                                    <a target="_blank" title="点点滴滴" href="timeline.html"><i class="fa fa-hourglass-half fa-2x"></i></a>
-                                </div>
-
                                 <fieldset class="layui-elem-field layui-field-title">
                                     <legend>简介</legend>
                                     <div class="layui-field-box aboutinfo-abstract">
@@ -241,12 +220,6 @@
         </li>
         <li class="layui-nav-item">
             <a href="article"><i class="fa fa-file-text fa-fw"></i>&nbsp;文章专栏</a>
-        </li>
-        <li class="layui-nav-item">
-            <a href="resource"><i class="fa fa-tags fa-fw"></i>&nbsp;资源分享</a>
-        </li>
-        <li class="layui-nav-item">
-            <a href="timeline"><i class="fa fa-road fa-fw"></i>&nbsp;点点滴滴</a>
         </li>
         <li class="layui-nav-item layui-this">
             <a href="about"><i class="fa fa-info fa-fw"></i>&nbsp;关于本站</a>
