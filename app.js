@@ -12,5 +12,5 @@ app.set('views', './views')
 
 app.use(express.static(path.join(__dirname, 'public')))
 routes(app)
-app.listen(3000);
-console.log('listening to port 3000');
+app.listen(3030);
+console.log('listening to port 3030');
